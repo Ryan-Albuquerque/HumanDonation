@@ -43,7 +43,7 @@
                         <a class="nav-link text-white" href="#">Login</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="btn btn-primary" href="#" role="button">Cadastre-se</a>
+                        <a class="btn btn-primary" href="#" role="button" data-toggle="modal" data-target="#exampleModal">Cadastre-se</a>
                     </li>
 
                 </ul>
@@ -208,15 +208,18 @@
                     </div>
                     <div class="col pt-4 ">
                         <h4 class="text-white font-weight-bold">Assine nosso Newletter</h4>
-                        <label class="sr-only" for="inlineFormInputGroupUsername">Digite seu email</label>
-                        <div class="input-group mb-3">
-                            <input type="email" class="form-control" id="inlineFormInputGroupUsername"
+                        <form action="">
+                            <label class="sr-only" for="inlineFormInputGroupUsername">Digite seu email</label>
+                            <div class="input-group mb-3">
+                             <input type="email" class="form-control" id="inlineFormInputGroupUsername"
                                 placeholder="user@example.com">
-                            <div class="input-group-prepend">
-                                <button type="submit" class="img p-0"><img src="./src/arrowIcon.png"
-                                        class="px-1 img" width="40"></button>
+                                <div class="input-group-prepend">
+                                    <button type="submit" class="img p-0"><img src="./src/arrowIcon.png"
+                                            class="px-1 img" width="40"></button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
+                        
                     </div>
                 </div>
                 
@@ -229,7 +232,36 @@
         
     </main>
 
-
+    <!--modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <form action="">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelpId" placeholder="">
+                    <label for="address">Endereço</label>
+                    <input type="text" class="form-control" name="address" id="" aria-describedby="address" placeholder="">
+                    <label for="CNPJ">CNPJ</label>
+                    <input type="tel" class="form-control" name="CNPJ" id="" aria-describedby="CNPJ" placeholder="">
+                    
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-outline-success">Cadastro</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    </div>
 
 
 
